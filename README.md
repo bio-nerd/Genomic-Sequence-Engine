@@ -1,17 +1,12 @@
-# TCGA Pan-Cancer Gene Expression Clustering
+# Automated Genomic Sequence Retrieval & Annotation Engine
 
-A lightweight Python pipeline performing unsupervised dimensionality reduction (PCA) on transcriptomic gene expression profiles across multiple cancer types.
+An intelligent Python tool that parses natural query requests, fetches precise genomic sequences live via Ensembl REST APIs, and automatically annotates key sequence properties (GC content, CpG islands, and Open Reading Frames).
 
-## Overview
-This repository demonstrates how high-dimensional gene expression data can be reduced down to two principal components (PC1 and PC2) to reveal distinct clustering across four carcinoma subtypes:
-- **BRCA** (Breast)
-- **LUAD** (Lung)
-- **PRAD** (Prostate)
-- **KIRC** (Kidney)
+## Features
+- **Natural Query Parsing:** Resolves human gene symbols and promoter window requests.
+- **Automated REST Retrieval:** Directly queries Ensembl endpoints to generate standard FASTA files.
+- **Analytical Annotation:** Calculates GC%, scans for CpG islands ($Obs/Exp > 0.6$), and predicts Open Reading Frames (ORFs).
 
-## Running the Script
+## Usage
 ```bash
-python3 tcga_analysis.py
-
-git add tcga_analysis.py tcga_pca_plot.png README.md
-git commit -m "Initial commit: TCGA PCA clustering analysis"
+python3 Fetch.py
