@@ -1,4 +1,3 @@
-cat << 'EOF' > Fetch.py
 import requests
 import json
 import re
@@ -137,5 +136,4 @@ def fetch_and_analyze(query):
 if __name__ == "__main__":
     prompt = input("Ask the Genomic Assistant (e.g., 'Fetch BRCA1 promoter 500bp'): ")
     fetch_and_analyze(prompt)
-EOF
-)
+
